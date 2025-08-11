@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <title>Catálogo de Produtos</title>
+    <link href="/css/output.css" rel="stylesheet">
+</head>
+<body class="bg-gray-100 p-8 font-sans">
+    <h1 class="text-4xl font-bold text-center mb-8 text-gray-800">Nossos Produtos</h1>
+    <div class="max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <% produtos.forEach(produto => { %>
+            <div class="bg-white p-6 rounded-lg shadow-md transition-shadow hover:shadow-lg">
+                <h3 class="text-xl font-semibold mb-2"><%= produto.nome %></h3>
+                <p class="text-gray-600 mb-4">Preço: $<%= produto.preco %></p>
+                <a href="/produto/<%= produto.id %>" class="inline-block bg-blue-500 text-white py-2 px-4 rounded hover:bg-blue-600 transition-colors">Ver detalhes</a>
+            </div>
+        <% }); %>
+    </div>
+</body>
+</html>

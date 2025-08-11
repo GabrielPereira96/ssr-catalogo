@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <title><%= produto.nome %> - Detalhes</title>
+    <link href="/css/output.css" rel="stylesheet">
+</head>
+<body class="bg-gray-100 p-8 font-sans">
+    <div class="max-w-2xl mx-auto bg-white p-8 rounded-lg shadow-md">
+        <a href="/" class="text-blue-500 hover:text-blue-600 transition-colors mb-4 inline-block">&larr; Voltar para a lista</a>
+        <h1 class="text-3xl font-bold mb-4"><%= produto.nome %></h1>
+        <p class="text-gray-700 text-lg mb-2"><strong>Preço:</strong> $<%= produto.preco %></p>
+        <p class="text-gray-600"><strong>Descrição:</strong> <%= produto.descricao %></p>
+    </div>
+</body>
+</html>
